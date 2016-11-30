@@ -7,11 +7,11 @@
     "license": "MIT",
     "support": {
         "email": "mwinjilisti@gmail.com",
-        "source": "https://github.com/hosannahighertech/yii2-oauth2"
+        "source": "https://github.com/hosannahighertech/yii2-oauth2-server"
     },
     "authors": [
         {
-            "name": "Igor Maliy",
+            "name": "Stefano Mtangoo",
             "email": "mwinjilisti@gmail.com"
         }
     ],
