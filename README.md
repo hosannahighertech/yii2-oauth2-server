@@ -13,13 +13,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist hosannahighertech/yii2-oauth2 "*"
+php composer.phar require --prefer-dist hosannahighertech/yii2-oauth2-server "*"
 ```
 
 or add
 
 ```json
-"hosannahighertech/yii2-oauth2": "dev-master"
+"hosannahighertech/yii2-oauth2-server": "dev-master"
 ```
 
 to the require section of your composer.json. 
