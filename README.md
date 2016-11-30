@@ -179,30 +179,32 @@ Here is a sample class for public key implementing `PublickKeyInterface`. Make s
 
 ```php
 <?php
-namespace app\storage;
+namespace app\security\storage;
 
 class PublicKeyStorage implements \OAuth2\Storage\PublicKeyInterface{
 
 
     private $pbk =  null;
     private $pvk =  null; 
-    
+
     public function __construct()
     {
-        $this->pvk =  file_get_contents('privkey.pem', true);
-        $this->pbk =  file_get_contents('pubkey.pem', true); 
+        $pvkText =  file_get_contents(dirname(__FILE__).'/../keys/privkey.pem');        
+        $this->pvk = openssl_get_privatekey($pvkText, 'YOUR_PASSPHRASE_IF_ANY');
+        
+        $this->pbk =  file_get_contents(dirname(__FILE__).'/../keys/pubkey.pem'); 
     }
 
     public function getPublicKey($client_id = null){ 
         return  $this->pbk;
     }
 
-    public function getPrivateKey($client_id = null){ 
+    public function getPrivateKey($client_id = null){
         return  $this->pvk;
     }
 
     public function getEncryptionAlgorithm($client_id = null){
-        return 'RS256';
+        return "RS256";
     }
 
 }
