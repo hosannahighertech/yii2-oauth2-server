@@ -53,20 +53,23 @@ To use this extension,  simply add the following code in your application config
 
 ```common\models\User``` - user model implementing an interface ```\OAuth2\Storage\UserCredentialsInterface```, so the oauth2 credentials data stored in user table. Make sure you implement:
 
-1.  ```public function checkUserCredentials($username, $password)``` which Checks the supplied username and password for validity and returns TRUE if the username and password are valid, and FALSE if it isn't.
+1.  `public function checkUserCredentials($username, $password)` which Checks the supplied username and password for validity and returns TRUE if the username and password are valid, and FALSE if it isn't.
 
-2. ```public function getUserDetails($username)```  which returns array of the associated "user_id" and optional "scope" values something like this: 
-```
+2. `public function getUserDetails($username)`  which returns array of the associated "user_id" and optional "scope" values something like this: 
+
+```php
 [ 
     "user_id"  => USER_ID,    // REQUIRED user_id to be stored with the authorization code or access token
     "scope"    => SCOPE       // OPTIONAL space-separated list of restricted scopes
-]```
+] 
+
+```
 
 Additional OAuth2 Flags:
 
-```enforceState``` - Flag that switch that state controller should allow to use "state" param in the "Authorization Code" Grant Type
+`enforceState` - Flag that switch that state controller should allow to use "state" param in the "Authorization Code" Grant Type
 
-```allowImplicit``` - Flag that switch that controller should allow the "implicit" grant type
+`allowImplicit` - Flag that switch that controller should allow the "implicit" grant type
 
 The next step your shold run migration
 
