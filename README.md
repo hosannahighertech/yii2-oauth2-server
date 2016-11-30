@@ -172,7 +172,9 @@ If you want to get Json Web Token (JWT) instead of convetional token, you will n
 `'public_key' => 'app\storage\PublicKeyStorage'` which is the class that implements [PublickKeyInterface](https://github.com/bshaffer/oauth2-server-php/blob/develop/src/OAuth2/Storage/PublicKeyInterface.php) and `'access_token' => 'OAuth2\Storage\JwtAccessToken'` which implements [JwtAccessTokenInterface.php](https://github.com/bshaffer/oauth2-server-php/blob/develop/src/OAuth2/Storage/JwtAccessTokenInterface.php). The Oauth2 base library provides the default [access_token](https://github.com/bshaffer/oauth2-server-php/blob/develop/src/OAuth2/Storage/JwtAccessToken.php) which works great. Just use it and everything will be fine.
 
 Here is a sample class for public key implementing `PublickKeyInterface`. Make sure that paths to private and public keys are correct. You can generate them with OpenSSL tool with two steps (Thanks to (Rietta)[https://rietta.com/blog/2012/01/27/openssl-generating-rsa-key-from-command/]):
+
 1. ```openssl genrsa -des3 -out privkey.pem 2048```
+
 2. ```openssl rsa -in privkey.pem -outform PEM -pubout -out pubkey.pem```
 
 **Note that** you can copy contents of the files and paste the long strings in class variables. It is nasty but it works fine if that is what you want.
