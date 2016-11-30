@@ -74,7 +74,7 @@ Additional OAuth2 Flags:
 The next step your shold run migration
 
 ```php
-yii migrate --migrationPath=@vendor/filsh/yii2-oauth2-server/migrations
+ yii migrate --migrationPath=@vendor/hosannahighertech/yii2-oauth2-server/migrations
 ```
 
 this migration create the oauth2 database scheme and insert test user credentials ```testclient:testpass``` for ```http://fake/```
