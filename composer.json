@@ -1,0 +1,30 @@
+{
+    "name": "hosannahighertech/yii2-oauth2",
+    "description": "OAuth2 Server for PHP a fork of filsh/yii2-oauth2-server",
+    "keywords": ["yii", "extension", "module", "oauth", "oauth2"],
+    "homepage": "https://github.com/hosannahighertech/yii2-oauth2",
+    "type": "yii2-extension",
+    "license": "MIT",
+    "support": {
+        "email": "mwinjilisti@gmail.com",
+        "source": "https://github.com/hosannahighertech/yii2-oauth2"
+    },
+    "authors": [
+        {
+            "name": "Igor Maliy",
+            "email": "mwinjilisti@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "bshaffer/oauth2-server-php": "~1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "filsh\\yii2\\oauth2server\\": ""
+        }
+    },
+    "extra": {
+        "bootstrap": "filsh\\yii2\\oauth2server\\Bootstrap"
+    }
+}
