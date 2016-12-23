@@ -155,6 +155,8 @@ class SiteController extends Controller
 }
 ```
 
+For More on Requests and responses as well as explanations for Oauth Grant types see excellet tutorial by Jenkov here: http://tutorials.jenkov.com/oauth2/
+
 [see more](http://bshaffer.github.io/oauth2-server-php-docs/grant-types/authorization-code/)
 
 Also if you set ```allowImplicit => true```  you can use Implicit Grant Type - [see more](http://bshaffer.github.io/oauth2-server-php-docs/grant-types/implicit/)
