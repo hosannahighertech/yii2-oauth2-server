@@ -19,7 +19,7 @@ php composer.phar require --prefer-dist hosannahighertech/yii2-oauth2-server "*"
 or add
 
 ```json
-"hosannahighertech/yii2-oauth2-server": "dev-master"
+"hosannahighertech/yii2-oauth2-server": "1.0.*"
 ```
 
 to the require section of your composer.json. 
