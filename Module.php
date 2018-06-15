@@ -5,6 +5,8 @@ namespace filsh\yii2\oauth2server;
 use \Yii;
 use yii\i18n\PhpMessageSource;
 use  \array_key_exists;
+use OAuth2\Request;
+use OAuth2\Response;
 
 /**
  * For example,
